@@ -1,6 +1,6 @@
 import type { Pump, Reading } from "./types";
 export const API_BASE = (
-  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000"
+  import.meta.env.VITE_API_URL || "https://jal-rakshak-k5uz.onrender.com"
 ).replace(/\/$/, "");
 export class ApiError extends Error {
   constructor(
