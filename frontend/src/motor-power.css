@@ -1,0 +1,236 @@
+.pump-card-main {
+  display: block;
+  min-width: 0;
+}
+.pump-card-main > p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  font-size: 7px;
+  color: #777d6d;
+}
+.pump-card-main > p > span {
+  color: #8b9281;
+}
+.motor-power {
+  padding: 22px 24px;
+  margin-bottom: 24px;
+}
+.motor-power.compact {
+  padding: 17px 0 0;
+  margin: 17px 0 0;
+  border-top: 1px solid #e3e6dc;
+}
+.motor-power-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.motor-power-copy > strong {
+  font-size: 12px;
+  font-weight: 500;
+  color: #343a2c;
+}
+.motor-power-copy > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 9px;
+}
+.motor-power-copy span {
+  font-size: 9px;
+  color: #869576;
+}
+.motor-power-copy b {
+  color: #626f51;
+  font-size: 9px;
+  font-weight: 500;
+}
+.motor-power-copy em {
+  font-size: 7px;
+  line-height: 1.5;
+  padding: 3px 6px;
+  color: #a27b39;
+  border: 1px solid #ecdfbf;
+  background: #fff9ed;
+  border-radius: 4px;
+  font-style: normal;
+}
+.power-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 28px;
+  padding: 3px;
+  border: 1px solid #d4ddc8;
+  border-radius: 999px;
+  background: #e9eee2;
+  cursor: pointer;
+  transition:
+    background 0.18s,
+    border-color 0.18s;
+}
+.power-switch[data-on="true"] {
+  background: #252b22;
+  border-color: #252b22;
+}
+.power-switch.unknown {
+  background: #f0f0e9;
+  border-style: dashed;
+  border-color: #b8c3a7;
+}
+.power-switch-knob {
+  display: grid;
+  place-items: center;
+  color: #727d60;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 4px #2537171c;
+  transform: translateX(0);
+  transition: transform 0.18s;
+}
+.power-switch[data-on="true"] .power-switch-knob {
+  transform: translateX(19px);
+}
+.power-switch:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.power-switch:focus-visible {
+  outline: 2px solid #252b22;
+  outline-offset: 4px;
+}
+.motor-power-message {
+  font-size: 9px;
+  line-height: 1.8;
+  color: #8c9b78;
+  margin-top: 12px;
+}
+.motor-power-error {
+  color: #ac4632;
+  font-size: 9px;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+.motor-power-retry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+.motor-power-retry p {
+  font-size: 8px;
+  color: #a07845;
+  line-height: 1.7;
+}
+.motor-power-retry button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #dbdfcd;
+  border-radius: 5px;
+  padding: 5px 7px;
+  font-size: 8px;
+  color: #7d8e65;
+}
+.motor-power.compact .motor-power-copy > strong {
+  font-size: 10px;
+}
+.motor-power.compact .motor-power-copy span,
+.motor-power.compact .motor-power-copy b {
+  font-size: 7px;
+}
+.motor-power.compact .motor-power-copy > div {
+  margin-top: 7px;
+  gap: 6px;
+}
+.motor-power.compact .motor-power-message {
+  font-size: 7px;
+  margin-top: 10px;
+}
+.motor-power.compact .motor-power-copy em {
+  font-size: 6px;
+}
+.motor-power.compact .power-switch {
+  width: 43px;
+  height: 25px;
+  padding: 3px;
+}
+.motor-power.compact .power-switch-knob {
+  height: 17px;
+  width: 17px;
+}
+.motor-power.compact .power-switch[data-on="true"] .power-switch-knob {
+  transform: translateX(17px);
+}
+@media (max-width: 900px) {
+  .motor-power.compact .motor-power-row {
+    gap: 10px;
+  }
+  .motor-power.compact .motor-power-copy > strong {
+    font-size: 10px;
+  }
+  .motor-power {
+    padding: 20px;
+  }
+  .motor-power.compact {
+    padding: 16px 0 0;
+  }
+  .pump-card-main > p {
+    font-size: 7px;
+  }
+}
+@media (max-width: 700px) {
+  .motor-power {
+    padding: 19px 17px;
+  }
+  .motor-power.compact {
+    padding: 15px 0 0;
+  }
+  .motor-power.compact .motor-power-copy span,
+  .motor-power.compact .motor-power-copy b {
+    font-size: 6px;
+  }
+  .motor-power.compact .motor-power-message {
+    font-size: 7px;
+  }
+  .motor-power.compact .power-switch {
+    width: 39px;
+    height: 24px;
+    padding: 3px;
+  }
+  .motor-power.compact .power-switch-knob {
+    width: 16px;
+    height: 16px;
+  }
+  .motor-power.compact .power-switch[data-on="true"] .power-switch-knob {
+    transform: translateX(13px);
+  }
+  .motor-power-copy > strong {
+    font-size: 12px;
+  }
+  .motor-power-message {
+    font-size: 9px;
+  }
+}
+@media (max-width: 380px) {
+  .motor-power.compact .motor-power-copy span,
+  .motor-power.compact .motor-power-copy b {
+    font-size: 8px;
+  }
+  .motor-power.compact .motor-power-copy > strong {
+    font-size: 11px;
+  }
+  .motor-power.compact .motor-power-message {
+    font-size: 8px;
+  }
+}
